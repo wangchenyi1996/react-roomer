@@ -2,20 +2,24 @@ import React, { Component } from 'react'
 import {Button} from 'antd-mobile'
 
 import './home.scss'
+//引入工具函数
+import { getStore } from "@/config/utils.js";
 
 export default class Home extends Component {
     constructor(props){
         super(props)
-        this.goRedux=this.goRedux.bind(this)
-        this.goReactRedux=this.goReactRedux.bind(this)
+        let { history } = this.props
+        if ( getStore("launchFlag") !== 'true' ) {
+            history.push('/welcome') 
+        }
     }
-    goRedux(){
+    goRedux = ()=> {
         let { history } = this.props
         // console.log(history)
         history.push('/redux')
     }
 
-    goReactRedux(){
+    goReactRedux = ()=> {
         let { history } = this.props
         // console.log(history)
         history.push('/react')

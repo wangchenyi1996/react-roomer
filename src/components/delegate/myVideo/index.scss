@@ -1,0 +1,61 @@
+@import '@/common/style.scss';
+
+.video-list {
+    padding-bottom: 100px;
+    .videos {
+      position: relative;
+      width: 90%;
+      margin: 0 auto;
+      background: url(https://public.danke.com.cn/public-20180606-Fu-8mEjulcv_rPp29Jd3MtLnQpQ3)
+        no-repeat center center;
+      height: 190px;
+      .my-video {
+        width: 100%;
+        height: 190px;
+        border: none;
+      }
+      .video-cover {
+        position: absolute;
+        z-index: 1;
+        background: url(https://public.danke.com.cn/public-20180606-Fu-8mEjulcv_rPp29Jd3MtLnQpQ3)
+          no-repeat center center;
+        height: 190px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-size: 100%;
+        > img {
+          width: 32px;
+          position: relative;
+          position: absolute;
+          bottom: 30px;
+          left: 30px;
+        }
+      }
+      .v-list {
+        margin-top: 15px;
+        width: 100%;
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+          width: 0 !important;
+          display: none;
+        }
+        li {
+          p {
+            padding: 10px 0 10px 0;
+            text-align: center;
+            font-size: 12px;
+            background-color: #f9f9f9;
+            color: $littlesc;
+          }
+          img {
+            width: 120px;
+          }
+          .i1,
+          .p1 {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,37 @@
+@import '@/common/style.scss';
+
+.labels {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .label-item {
+      position: relative;
+      > img {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 7px;
+      }
+      .intro-item {
+        :first-child {
+          text-align: center;
+          margin-bottom: 10px;
+          font-size: $base-fz;
+          color: #7e7d7e;
+        }
+        :last-child {
+          font-size: $base-fz;
+          color: #7e7d7e;
+        }
+      }
+      .ic1:after,
+      .ic2:after,
+      .ic3:after {
+        content: " ";
+        position: absolute;
+        width: 60px;
+        left: 37px;
+        bottom: 28px;
+        @include borderAll($r: #efefef);
+        opacity: 0.35;
+      }
+    }
+  }

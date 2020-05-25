@@ -7,32 +7,34 @@ class AppFooter extends Component {
     renderFooter() {
         let { navs } = this.props
         let { pathname } = this.props.location;
+        return (
+            navs.map(item => {
+                return (
+                    <NavLink key={item.id} to={item.path} exact={item.exact}>
+                        <li className={ item.path===pathname ? 'tab-item u-f-c active' : 'tab-item u-f-c' }>
+                            <i className={"iconfont icon icon-" + item.icon}></i>
+                            <span className="tab-desc">{item.title}</span>
+                        </li>
+                    </NavLink>
+                )
+            })
+        )
+    }
+    render() {
+        let { navs } = this.props
+        let { pathname } = this.props.location;
         let temp = navs.findIndex((nav) => nav.path === pathname)
         if( temp === -1 ){
             return ''
         }else{
             return (
-                navs.map(item => {
-                    return (
-                        <NavLink key={item.id} to={item.path} exact={item.exact}>
-                            <li className={ item.path===pathname ? 'tab-item u-f-c active' : 'tab-item u-f-c' }>
-                                <i className={"iconfont icon icon-" + item.icon}></i>
-                                <span className="tab-desc">{item.title}</span>
-                            </li>
-                        </NavLink>
-                    )
-                })
+                <div className="tabbar">
+                    <ul className="tab-list u-f u-f-asc">
+                        {this.renderFooter()}
+                    </ul>
+                </div >
             )
         }
-    }
-    render() {
-        return (
-            <div className="tabbar">
-                <ul className="tab-list u-f u-f-asc">
-                    {this.renderFooter()}
-                </ul>
-            </div >
-        )
     }
 }
 

@@ -1,0 +1,37 @@
+@import '@/common/style.scss';
+
+.danke-live {
+    background-color: #f9f9f9;
+    padding: 15px 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+    .live-title {
+      .title {
+        font-size: $base-fz-m;
+        color: $big-color;
+        font-weight: bold;
+      }
+    }
+    .live-list {
+      margin-top: 15px;
+      .live-item {
+        width: 48%;
+        > img {
+          border-radius: 4px;
+          margin-bottom: 10px;
+        }
+        > p {
+          font-size: $base-fz;
+          color: $text-color;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .customer-service {
+    margin-top: 20px;
+    > img {
+      border-radius: 4px;
+      border: 1px solid #f9f9f9;
+    }
+  }

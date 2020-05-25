@@ -1,5 +1,4 @@
-export default [
-    {
+export default [{
         // 导航名称
         text: "不限",
         // 导航名称右上角徽标

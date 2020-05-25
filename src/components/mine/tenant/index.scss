@@ -1,0 +1,24 @@
+@import '@/common/style.scss';
+
+.room-service {
+  margin-top: 20px;
+  background-color: #ffffff;
+  padding: 15px 10px;
+  border-radius: 8px;
+  .service {
+    font-size: $base-fz-m;
+    color: $big-color;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  img {
+    border-radius: 4px;
+    margin-right: 7px;
+  }
+}
+.end {
+  margin-top: 20px;
+  text-align: center;
+  font-size: $base-fz;
+  color: $littlesc;
+}
