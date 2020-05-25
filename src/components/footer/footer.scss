@@ -1,0 +1,55 @@
+@import '../../common/style.scss';
+
+.tabbar {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $bgcolor;
+  height: $tabH;
+  .tab-list {
+    width: 100%;
+    height: $tabH;
+    .active {
+      color: $main-color !important;
+      animation: jump 1s;
+    }
+    .tab-item {
+      color: $tabColor;
+      .tab-desc {
+        margin-top: 5px;
+      }
+      .icon::before {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@keyframes jump {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  14% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  28% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  42% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  70% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

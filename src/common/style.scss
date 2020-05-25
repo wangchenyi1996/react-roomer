@@ -1,0 +1,144 @@
+// 页面主色、TabBar样式
+$bgcolor:#f9f9f9; //页面及Tab的背景颜色
+$tabH:50px; //Tab的高度
+$tabColor:#cfcfcf; //Tab文字颜色
+
+// 辅助色
+$text-color:#515151;
+$color-info: #999;
+$main-color:#54cbcc;
+$main-color2:#3dbdc7;
+$color1: #FA735F;
+$color2: #7183AB;
+$bg-color2:#F6F7F9;
+$color3: #F37662;
+$bg-color3: #FFF1EE;
+
+// 文字、背景
+$base-fz:12px;
+$base-fz-s:14px;
+$base-fz-m:16px;
+$base-fz-l:18px;
+$black: #373b3e;
+$littlesc:#969a9d;
+// 大的标题
+$big-color:#000000;
+$big-fz:20px;
+
+// 边框
+$borderColor-s:#eeeeee;
+$borderColor-l:#efefef;
+$borderColor-m:#cfcfcf;
+
+// 边框(四边)
+@mixin borderAll($w:1px, $r:#eee) {
+    border: $w solid $r;
+}
+
+@mixin borderTop($w:1px, $r:#eee) {
+    border-top: $w solid $r;
+}
+
+@mixin borderBottom($w:1px, $r:#eee) {
+    border-bottom: $w solid $r;
+}
+
+// 使用方式--->@include borderAll($r:red);	//mixin混入
+
+/*  清除浮动  */
+%clearFix {
+    *zoom: 1;
+    &:after {
+        content: " ";
+        display: block;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+// 显示省略号 -->只显示一行文字
+%ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+//显示省略号 -->显示多行文字
+@mixin twoEllipsis($row) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $row; //需要控制的文本行数
+    overflow: hidden;
+}
+//使用方式---->@extend %ellipsis;	//继承
+
+
+/* flex布局 */
+.u-f,
+.u-f-r,
+.u-f-c,
+.u-f-ac,
+.u-f-jc,
+.u-f-ajc,
+.u-f-sbc {
+    display: flex;
+}
+
+.u-f-ajc {
+    justify-content: center;
+    align-items: center;
+}
+
+.u-f-sbc {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.u-f-asc {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.u-f-item {
+    flex: 1;
+}
+
+.u-f-wrap {
+    flex-wrap: wrap;
+}
+
+.u-f-r {
+    flex-direction: row;
+}
+
+.u-f-c {
+    flex-direction: column;
+}
+
+.u-f-start {
+    justify-content: flex-start;
+}
+
+.u-f-end {
+    justify-content: flex-end;
+}
+
+.u-f-jc {
+    justify-content: center;
+}
+
+.u-f-jsb {
+    justify-content: space-between;
+}
+
+.u-f-ac {
+    align-items: center;
+}
+
+.u-f-as {
+    align-items: flex-start;
+}
+
+.u-f-ae {
+    align-items: flex-end;
+}
+

@@ -1,0 +1,15 @@
+@import '@/common/style.scss';
+.my-list {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    >li {
+        >img {
+            width: 32px;
+            margin-bottom: 10px;
+        }
+        >span {
+            font-size: $base-fz;
+            color: $littlesc;
+        }
+    }
+}

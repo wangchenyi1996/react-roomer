@@ -1,0 +1,25 @@
+.not-found {
+    position: relative;
+    overflow: hidden;
+    .not-cont {
+        position: absolute;
+        bottom: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        .not-text {
+            color: orangered;
+            font-size: 15px;
+        }
+        .not-text:first-child {
+            margin-right: 30px;
+        }
+    }
+    p {
+        position: absolute;
+        bottom: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #556677;
+        font-size: 15px;
+    }
+}
