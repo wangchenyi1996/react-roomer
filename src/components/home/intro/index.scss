@@ -1,0 +1,11 @@
+.intro-list {
+    margin: 10px 10px;
+    .intro-item {
+        span {
+            transform: scale(.8);
+            display: inline-block;
+            margin-left: -5px;
+        }
+    }
+}
+
