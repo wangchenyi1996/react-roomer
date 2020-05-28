@@ -1,0 +1,39 @@
+.quality {
+  margin: 30px 10px 0 10px;
+  margin-bottom: 25px;
+  .quality-item {
+    .icon-q {
+      height: 36px;
+      width: 36px;
+      border-radius: 50%;
+      @include borderAll(2px, #cfcfcf);
+      margin-bottom: 7px;
+    }
+    .icon-msg {
+      font-size: $base-fz;
+      color: $color-info;
+      margin-bottom: 7px;
+      font-weight: 500;
+    }
+    .labels2 {
+      transform: scale(0.8);
+      display: inline-block;
+      color: $littlesc;
+      margin: 0;
+    }
+  }
+}
+
+.more {
+  .more-btn {
+    width: 60%;
+    border: none;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(230, 230, 230, .26);
+    border-radius: 30px;
+    color: $color-info;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}

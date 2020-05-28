@@ -1,0 +1,22 @@
+.intro {
+  margin: 20px 10px 0 10px;
+  .left {
+     :first-child {
+      height: 125px;
+    }
+    margin-right: 10px;
+    box-sizing: border-box;
+  }
+  .right {
+     :first-child {
+      margin-bottom: 5px;
+      height: 60px;
+    }
+     :last-child {
+      height: 60px;
+    }
+  }
+  .intro-img {
+    border-radius: 10px;
+  }
+}

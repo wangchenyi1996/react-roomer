@@ -1,0 +1,23 @@
+.g-l-t{
+    font-size: 16px;
+    color: #515151;
+    text-align: center;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    &::after,&::before{
+        position: absolute;
+        content: " ";
+        border: .5px solid #eeeeee;
+        width: 27%;
+        top: 15px;
+    }
+    /*调整背景横线的左右距离*/
+    &::after{
+        right: 15px;
+    }
+    &::before{
+        left: 15px;
+    }
+}

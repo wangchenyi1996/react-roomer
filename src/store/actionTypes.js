@@ -1,9 +1,13 @@
-export const CHANGINPUT = 'changeInput' 
-export const CHANGINPUTWORK = 'changeInputwork' 
-export const ADDITEM = 'additem' 
-export const DELETEITEM = 'delItem' 
-export const  GET_LIST = 'getList'
+/**************************** user 模块 ****************************/
+
+// 获取用户信息
+export const GET_USERINFO = 'getUserInfo' 
+// 添加用户
+export const ADD_USER = 'addUser' 
+// 获取用户列表
+export const  GET_USER_LIST = 'getUserList'
 
 
-
+/**************************** roomer 模块 ****************************/
 export const  ADD_COUNT = 'addCount'
+export const  MINUS_COUNT = 'minusCount'

@@ -21,12 +21,12 @@ class AppFooter extends Component {
         )
     }
     render() {
-        let { navs } = this.props
-        let { pathname } = this.props.location;
-        let temp = navs.findIndex((nav) => nav.path === pathname)
-        if( temp === -1 ){
-            return ''
-        }else{
+        // let { navs } = this.props
+        // let { pathname } = this.props.location;
+        // let temp = navs.findIndex((nav) => nav.path === pathname)
+        // if( temp === -1 ){
+        //     return ''
+        // }else{
             return (
                 <div className="tabbar">
                     <ul className="tab-list u-f u-f-asc">
@@ -34,7 +34,7 @@ class AppFooter extends Component {
                     </ul>
                 </div >
             )
-        }
+        // }
     }
 }
 

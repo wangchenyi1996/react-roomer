@@ -47,7 +47,7 @@ export default class Welcome extends Component {
             <Carousel
                 selectedIndex={currentIndex}
                 className="dots"
-                dotActiveStyle={{ backgroundColor:'#654f3a' }}
+                dotActiveStyle={{ backgroundColor:'#654f3a',width:'14px' }}
                 afterChange={ (index)=> this.swiperChange(index) }
             >
                 {   

@@ -22,12 +22,15 @@ import Wallet from '@/views/services/wallet/Wallet'
 import Coupon from '@/views/services/coupon/Coupon'
 import Reservation from '@/views/services/record/Reservation'
 
+// 房屋详情
+import RoomDetail from '@/views/roomDetail/RoomDetail'
+
 // 测试 redux使用
 import Redux from '@/views/testRedux/Redux'
 import ReactRedux from '@/views/testRedux/ReactRedux'
 
 // 底部 tabbar
-import AppFooter from '@/components/footer/'
+// import AppFooter from '@/components/footer/'
 
 class App extends Component {
   
@@ -39,7 +42,7 @@ class App extends Component {
         {
           navs.map(item=>{
             if(item.type ===1){
-              return <Route key={item.id} path={item.path} component={item.component} exact={item.exact} />
+              return <Route key={item.id} path={item.path} component={item.component} exact={item.exact}/>
             }else{
               return <Redirect key={item.id} from={item.fromurl} to={item.tourl} exact></Redirect>
             }
@@ -56,15 +59,15 @@ class App extends Component {
   }
 
   // 底部 tabbar
-  renderFooter(){
-    return <AppFooter />
-  }
+  // renderFooter(){
+  //   return <AppFooter />
+  // }
 
   render() {
     return (
       <Router>
         {this.renderNavs()}
-        {this.renderFooter()}
+        {/* {this.renderFooter()} */}
       </Router>
     )
   }
@@ -76,6 +79,7 @@ App.defaultProps = {
     { id: 2,type:1, path: "/findHome", component: FindHome, exact: false },
     { id: 3,type:1, path: "/delegate", component: Delegate, exact: false},
     { id: 4,type:1, path: "/user", component: User, exact: false },
+
     { id: 5,type:1, path: "/redux", component: Redux, exact: false },
     { id: 6,type:1, path: "/react", component: ReactRedux, exact: false },
     { id: 7,type:2, fromurl:'/',tourl:'/home' },
@@ -88,6 +92,7 @@ App.defaultProps = {
     { id: 14,type:1, path: "/wallet", component: Wallet, exact:false },
     { id: 15,type:1, path: "/coupon", component: Coupon, exact:false },
     { id: 16,type:1, path: "/record", component: Reservation, exact:false },
+    { id: 17,type:1, path: "/roomdetail/:id", component: RoomDetail, exact:false },
 
     { id: 8,type:1, path: "/*", component: NotFound, exact:false },
   ]

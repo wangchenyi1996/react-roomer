@@ -1,0 +1,49 @@
+@import '@/common/style.scss';
+.am-carousel-wrap-dot{
+    margin: 0 2px;
+}
+.am-carousel-wrap-dot-active{
+  width: 14px;
+  border-radius: 10px;
+  background-color: #654f3a;
+}
+
+.pp-t{
+    width:280px;
+    margin:0 auto;
+}
+.banners-bg {
+    background: url("../../../assets/imgs/delegate/bg-2.png") no-repeat center center;
+    height: 300px;
+    background-size: 100%;
+    margin-bottom: 30px;
+    .banners {
+      height: 240px;
+      width: 88%;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 4px;
+      .dots{
+          position: relative;
+          top:20px;
+      }
+      .p1 {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 15px;
+        letter-spacing: 3px;
+        color: #7e7d7e;
+      }
+      .p2,
+      .p3,
+      .p4 {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 13px;
+        letter-spacing: 3px;
+        color: #7e7d7e;
+        line-height: 20px;
+      }
+    }
+  }
