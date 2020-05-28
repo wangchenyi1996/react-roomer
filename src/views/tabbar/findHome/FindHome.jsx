@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Button } from 'antd-mobile'
 
+import './findHome.scss'
+
 import {connect} from 'react-redux'  //引入连接器
 // import * as actions  from '@/store/actions/roomerAction'
 import { addCounter,minCounter }  from '@/store/actions/roomerAction'
@@ -73,17 +75,18 @@ class FindHome extends Component {
 
   getUsersList = ()=>{
     //异步方式
-    const action = this.props.userActions.getUserList()
-    console.log(action)
-    // store.dispatch(action)
-    this.props.userActions.getListAction(action)
+    this.props.userActions.getUserList()
+  }
+
+  componentDidMount(){
+    this.getUsersList()
   }
 
   render() {
     let { userInfo,userlist } = this.props
-    console.log(userlist)
+    console.log('用户列表',userlist)
     return (
-      <div>
+      <div className="find-home">
         <div className="btn-group">
           <Button type="primary" className="btn1" onClick={this.goRedux} >测试Redux</Button>
 
@@ -120,7 +123,7 @@ class FindHome extends Component {
           <hr/>
           <Button onClick={this.getUsersList}>获取用户列表</Button>
 
-          {/* {
+          {
             userlist.length>0
             ? 
             userlist.map((item)=>(
@@ -131,7 +134,7 @@ class FindHome extends Component {
               </p> 
             ))
             : ""
-          } */}
+          }
 
         </div>
 
