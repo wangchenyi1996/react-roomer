@@ -4,6 +4,40 @@ const { override, fixBabelImports, addWebpackAlias } = require('customize-cra');
 const alter_config = () => (config, env) => {
   const oneOf_loc = config.module.rules.findIndex(n => n.oneOf)
   config.module.rules[oneOf_loc].oneOf = [ //例如要增加处理less的配置
+    // {
+    //   test: /\.css$/,
+    //   exclude: [/node_modules/,path.resolve(__dirname,'src/assets/fonts')],
+    //   use: [
+    //     require.resolve('style-loader'),
+    //     {
+    //       loader: require.resolve('css-loader'),
+    //       options: {
+    //         modules: {
+    //           localIdentName:'[name]__[local]__[hash:base64:5]'
+    //         },
+    //       },
+    //     },
+    //     {
+    //       loader: require.resolve('postcss-loader'),
+    //       options: {
+    //         ident: 'postcss',
+    //         plugins: () => [
+    //           require('postcss-flexbugs-fixes'),
+    //           autoprefixer({
+    //             browsers: [
+    //               '>1%',
+    //               'last 4 versions',
+    //               'Firefox ESR',
+    //               'not ie < 9', // React doesn't support IE8 anyway
+    //             ],
+    //             flexbox: 'no-2009',
+    //           }),
+    //         ],
+    //       },
+    //     },
+    //   ],
+    // },
+
     {
       test: /\.less$/,
       use: [
@@ -77,7 +111,8 @@ module.exports = override(
   fixBabelImports('import', {
     libraryName: 'antd-mobile',
     libraryDirectory: 'es',
-    style: true
+    // style: true
+    style: 'css'
   })
 
 );

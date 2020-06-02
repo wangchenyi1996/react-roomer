@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import {withRouter } from 'react-router-dom'
+
 import { Toast } from 'antd-mobile';
 
 import './index.scss'
 
-export default class HeaderNav extends Component {
+class HeaderNav extends Component {
   state = {
     flag:true,
     isClear: false,
@@ -69,6 +71,12 @@ export default class HeaderNav extends Component {
     })
   }
 
+  // 跳转到 消息通知页面
+  goMsg = ()=>{
+    // console.log(this.props)
+    const { history } = this.props
+    history.push('/informs') 
+  }
 
   render() {
     let { flag,isClear,search } = this.state
@@ -92,7 +100,7 @@ export default class HeaderNav extends Component {
             isClear ? <img src={require("@/assets/imgs/clear.png")} className="clear" alt="清除" onClick={ this.clearSearch }/> : ''
           }
         </div>
-        <div className={`msg ${flag ? '' : 'h_abs'}`}>
+        <div className={`msg ${flag ? '' : 'h_abs'}`}  onClick={ this.goMsg }>
           <i className="iconfont icon-xiaoxi iconmsg"></i>
           <span className="msg-dot"></span>
         </div>
@@ -101,3 +109,4 @@ export default class HeaderNav extends Component {
   }
 }
 
+export default withRouter(HeaderNav) 

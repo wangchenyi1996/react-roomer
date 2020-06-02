@@ -111,7 +111,7 @@ class FindHome extends Component {
             userInfo.id
             ? 
             <p style={{ height:'40px',fontSize:'20px',marginTop:'30px' }}>
-              <span>学号：{userInfo.id}</span>
+              <span className="test">学号：{userInfo.id}</span>
               <span>姓名：{userInfo.name}</span>
               <span>年龄：{userInfo.age}</span>
             </p> 

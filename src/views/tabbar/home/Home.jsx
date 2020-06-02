@@ -37,32 +37,25 @@ class Home extends Component {
         }
     }
 
-    // 租住品质 滑动事件
-    handleRent = (index)=> {
-      this.setState({
-        current2: index
-      })
-    }
-
     state = {
-      swiperList: [
-        {
-        "id": 1,
-        "url": "https://public.danke.com.cn/public-20191015-FojGewWlpLqD4RMxt_7VrXhPzqsN"
-        },
-        {
-        "id": 2,
-        "url": "https://public.danke.com.cn/public-20190908-Fjit4zQaBAN1GTExqrl3r1OwYN-8"
-        },
-        {
-        "id": 3,
-        "url": "https://public.danke.com.cn/public-20190606-Fn47vVrRsxTLdwr3CaUoSZJ6jzzl"
-        },
-        {
-        "id": 4,
-        "url": "https://public.danke.com.cn/public-20191009-FiZYvj4GTuQ3lP7kYIbT6NJ0kwWF"
-        }
-      ],
+      // swiperList: [
+      //   {
+      //   "id": 1,
+      //   "url": "https://public.danke.com.cn/public-20191015-FojGewWlpLqD4RMxt_7VrXhPzqsN"
+      //   },
+      //   {
+      //   "id": 2,
+      //   "url": "https://public.danke.com.cn/public-20190908-Fjit4zQaBAN1GTExqrl3r1OwYN-8"
+      //   },
+      //   {
+      //   "id": 3,
+      //   "url": "https://public.danke.com.cn/public-20190606-Fn47vVrRsxTLdwr3CaUoSZJ6jzzl"
+      //   },
+      //   {
+      //   "id": 4,
+      //   "url": "https://public.danke.com.cn/public-20191009-FiZYvj4GTuQ3lP7kYIbT6NJ0kwWF"
+      //   }
+      // ],
       intro: [
         {
           id: 1,
@@ -286,13 +279,19 @@ class Home extends Component {
         }
       ],
       // 广告弹框显示隐藏
-      isflag: true,
       fix:true
     }
+
+    // 租住品质 滑动事件
+    handleRent = (index)=> {
+      this.setState({
+        current2: index
+      })
+    }
+   
     // 关掉广告弹框事件
     handleFirst = ()=> {
       this.setState({
-        // isflag:false,
         fix:false
       })
       this.props.actions.addCounter(1)
@@ -303,18 +302,27 @@ class Home extends Component {
     }
 
     componentDidMount(){
-      // console.log(1234)
+      if(this.props.count>0){
+        this.setState({
+          fix:false
+        })
+      }
+      // 获取首页轮播图
+      this.props.actions.asyncHomeSwiperListAction()
+      // 获取房屋列表
+      this.props.actions.asyncGetFindHomeRoomList()
+
     }
 
     render() {
-      let { swiperList,intro,roomOption,roomIntro,discountRoom,rentalQuality,current2,goodProduct,fix } = this.state
+      let { intro,roomOption,roomIntro,discountRoom,rentalQuality,current2,goodProduct,fix } = this.state
         return (
-          <div className={ fix ? 'home-container fix' : 'home-container' } >
-              {/*  <div className={ `home-container ${ fix ? 'fix' : '' }`} > */}
+          // <div className={ fix ? 'home-container fix' : 'home-container' } >
+            <div className={ `home-container ${ fix ? 'fix' : '' }`} > 
               {/* 头部导航 */}
               <HeaderNav/>
               {/* 轮播 */}
-              <SwiperHeader swiperList={ swiperList } />
+              <SwiperHeader swiperList={ this.props.swiperList } />
               {/* 小介绍 */}
               <Intro intro={ intro } />
               {/* 合租、整租、月租、找房 */}
@@ -349,9 +357,8 @@ class Home extends Component {
 
 const mapStateToProps = state =>{
   return {
-    count:state.roomer.count,
-    // userInfo:state.user.userInfo,
-    // userlist:state.user.userlist,
+    count: state.roomer.count,
+    swiperList: state.roomer.swiperList
   }
 }
 

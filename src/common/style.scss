@@ -142,4 +142,7 @@ $borderColor-m:#cfcfcf;
     align-items: flex-end;
 }
 
-* { touch-action: pan-y; } 
+* { 
+    // touch-action: auto; 
+    touch-action: pan-x pan-y; 
+} 
