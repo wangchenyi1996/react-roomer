@@ -39,11 +39,12 @@
       }
       .p4 {
         margin-bottom: 10px;
-        li {
-          padding: 3px 5px;
+        font-size: 13px;
+        >li {
+          padding: 3px;
           border-radius: 4px;
         }
-         :nth-child(2n + 1) {
+        :nth-child(2n + 1) {
           color: $color3;
           background-color: #fff1ee;
           margin-right: 7px;

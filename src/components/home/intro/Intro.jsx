@@ -10,7 +10,7 @@ export default class Intro extends Component {
         {
           intro.map((item)=>{
             return (
-              <li className="intro-item u-f u-f-asc" key={item.id}>
+              <li className="h-intro-item u-f u-f-asc" key={item.id}>
                 <img src={item.img} width="16" height="16" alt="服务介绍"/>
                 <span>{item.text}</span>
               </li>

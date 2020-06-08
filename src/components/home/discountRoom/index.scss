@@ -30,22 +30,24 @@
         padding: 5px 0;
       }
     }
-    .fw-lb-t1{
-        background-color: #ffffff;
-        color:#666;
-        display:inline-block;
-        padding:4px;
-        transform:scale(.9);
-        border:1px solid #ccc;
-        border-radius:4px;
+    .fw-lb-t1 {
+      font-size: 12px;
+      background-color: #ffffff;
+      color: #666;
+      display: inline-block;
+      padding: 4px;
+      transform: scale(.9);
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
-    .fw-lb-t2{
-        background-color: #ff7966;
-        color:#fff;
-        display:inline-block;
-        padding:4px;
-        transform:scale(.9);
-        border-radius:4px;
+    .fw-lb-t2 {
+      font-size: 12px;
+      background-color: #ff7966;
+      color: #fff;
+      display: inline-block;
+      padding: 4px;
+      transform: scale(.9);
+      border-radius: 4px;
     }
   }
 }

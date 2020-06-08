@@ -16,10 +16,11 @@
       font-weight: 500;
     }
     .labels2 {
-      transform: scale(0.8);
+      transform: scale(0.9);
       display: inline-block;
       color: $littlesc;
       margin: 0;
+      font-size: $base-fz;
     }
   }
 }
