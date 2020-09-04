@@ -18,7 +18,10 @@ export default class Login extends Component {
     code: "",
     rightPhone: false,
     flag: false,
-    dis: false
+    dis: false,
+    // 多个输入框简单处理
+    username: '',
+    password: ''
   }
 
   goHome = () => {
@@ -56,16 +59,16 @@ export default class Login extends Component {
     // 获取输入框的值
     let tempV1 = this.telRef.current.value
     let tempV2 = this.codeRef.current.value
-    // console.log(tempV1,tempV2)
+    console.log(tempV1, tempV2)
     if (!tempV1) {
-      Toast.loading('手机号码不能为空', 30);
+      Toast.info('手机号码不能为空', 30);
       setTimeout(() => {
         Toast.hide();
       }, 1000);
       return;
     }
     if (!tempV2) {
-      Toast.loading('验证码不能为空', 30);
+      Toast.info('验证码不能为空', 30);
       setTimeout(() => {
         Toast.hide();
       }, 1000);
@@ -86,12 +89,19 @@ export default class Login extends Component {
       this.goHome()
       Toast.hide();
     }, 1000);
-
-
+  }
+  // 处理多个输入框简单处理
+  onInputChange = (e)=>{
+    let InputName = e.target.name;
+    let InputValue = e.target.value;
+    console.log(InputName,InputValue)
+    this.setState({
+        [ InputName ]: InputValue ,
+    })
   }
 
   render() {
-    let { rightPhone, codeTime, codeMsg, flag, dis } = this.state
+    let { rightPhone, codeTime, codeMsg, flag, dis, username, password } = this.state
     return (
       <div className="login">
         {/* 头部内容 */}
@@ -109,6 +119,11 @@ export default class Login extends Component {
         </div>
         {/* 主体部分 */}
         <div className="main">
+          {/* 处理多个输入框简单处理 */}
+         <>
+            <input type="text" name="username" value={username} onChange = { this.onInputChange } placeholder="请输入用户名"/>
+            <input type="text" name="password" value={password} onChange = { this.onInputChange } placeholder="请输入密码"/>
+         </>
 
           <div className="ip1">
             <input type="text" className="inputs" placeholder="请输入手机号" ref={this.telRef} onChange={this.telFunc} />
@@ -138,7 +153,6 @@ export default class Login extends Component {
             <span>《用户使用条款》</span>
             <span>《隐私保护政策》</span>
           </div>
-
         </div>
 
       </div >
