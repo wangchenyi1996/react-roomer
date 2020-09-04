@@ -1,0 +1,24 @@
+.major {
+    margin: 30px 10px 0 10px;
+    .major-left {
+      height: 50px;
+      .major-title {
+        > :first-child {
+          font-size: $big-fz;
+          color: $big-color;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        :last-child {
+          font-size: $base-fz;
+          color: $littlesc;
+        }
+      }
+    }
+    .major-right {
+      margin-top: 15px;
+      > img {
+        border-radius: 4px;
+      }
+    }
+  }

@@ -1,0 +1,20 @@
+.first {
+  position: absolute;
+  left: 0;
+  right: 0;
+  // top: -30px;
+  bottom: 0;
+  margin-left: -15px;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 9999;
+  overflow-y: hidden;
+  height: 100%;
+  img:first-child {
+    border-radius: 10px;
+    width: 70%;
+    margin-bottom: 15px;
+  }
+  img:last-child {
+    width: 30px;
+  }
+}

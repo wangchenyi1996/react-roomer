@@ -1,0 +1,12 @@
+.intro-list {
+    margin: 10px 10px;
+    .h-intro-item {
+        font-size: 12px;
+        span {
+            transform: scale(.8);
+            display: inline-block;
+            margin-left: -5px;
+        }
+    }
+}
+

@@ -1,0 +1,88 @@
+.lists {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #f9f9f9;
+  .p1 {
+    font-size: $base-fz-s;
+    color: $text-color;
+    font-weight: bold;
+    margin-bottom: 8px;
+    padding: 3px 0;
+    @extend %ellipsis;
+  }
+  .room-item {
+    .room-left {
+      width: 37%;
+      height: 35%;
+      margin-right: 10px;
+      border-radius: 4px;
+    }
+    .room-right {
+      width: 60%;
+      .p1 {
+        font-size: $base-fz-m;
+        font-weight: bold;
+        color: $big-color;
+        margin-bottom: 7px;
+        @extend %ellipsis;
+      }
+      .p2,
+      .p3 {
+        font-size: $base-fz;
+        color: #999;
+        margin-bottom: 7px;
+        padding-bottom: 1px;
+        @extend %ellipsis;
+      }
+      .p4 {
+        margin-bottom: 10px;
+        font-size: 13px;
+        >li {
+          padding: 3px;
+          border-radius: 4px;
+        }
+        :nth-child(2n + 1) {
+          color: $color3;
+          background-color: #fff1ee;
+          margin-right: 7px;
+        }
+         :nth-child(2n) {
+          color: $littlesc;
+          background-color: #ffffff;
+          @include borderAll($r: $tabColor);
+          margin-right: 7px;
+        }
+      }
+      .p5 {
+        span:nth-child(1) {
+          font-size: $base-fz;
+          color: $color3;
+        }
+        span:nth-child(2) {
+          font-size: $base-fz-m;
+          font-weight: bold;
+          color: $color3;
+        }
+        span:nth-child(3) {
+          font-size: $base-fz;
+          color: $littlesc;
+        }
+        span:nth-child(4) {
+          font-size: $base-fz;
+          color: $littlesc;
+          text-decoration: line-through;
+        }
+        .yk {
+          font-size: $base-fz-s;
+          color: #fff;
+          background-color: $main-color;
+          padding: 5px 10px;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}

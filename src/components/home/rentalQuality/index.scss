@@ -1,0 +1,33 @@
+.swiper-container {
+  background-color: $bgcolor;
+  height: 220px;
+  margin: 20px 10px 0px 10px;
+  .lives {
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    
+    &-title {
+      font-size: $big-fz;
+      font-weight: bolder;
+      color: $big-color;
+      margin-left: 10px;
+    }
+    .custom-indicator {
+      font-size: $base-fz;
+      position: absolute;
+      right: 10px;
+      top: 0px;
+      z-index: 999;
+      span:first-child {
+        font-size: 18px;
+        color: $big-color;
+        font-weight: bold;
+      }
+      span:last-child {
+        font-size: $base-fz;
+        color: $littlesc;
+      }
+    }
+  }
+}

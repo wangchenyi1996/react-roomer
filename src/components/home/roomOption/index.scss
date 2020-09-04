@@ -1,0 +1,10 @@
+@import '@/common/style.scss';
+.room-opt {
+    margin-top: 25px;
+    .room {
+        >span {
+            color: $littlesc;
+        }
+    }
+}
+

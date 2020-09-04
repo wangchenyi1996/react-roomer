@@ -1,0 +1,53 @@
+.slide-scroll {
+  height: 200px;
+  margin: 20px 10px 0 10px;
+  div:first-of-type {
+    margin-bottom: 7px;
+    .th-title {
+      color: $big-color;
+      font-size: $big-fz;
+      font-weight: bolder;
+    }
+  }
+  .slide-list {
+    // width: 100%;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .slide-item {
+      width: 125px;
+      margin-right: 7px;
+      .room-where {
+        @extend %ellipsis;
+        font-size: $base-fz;
+        color: $big-color;
+        font-weight: bold;
+        padding: 3px 0;
+      }
+      .discount {
+        font-size: $base-fz;
+        padding: 5px 0;
+      }
+    }
+    .fw-lb-t1 {
+      font-size: 12px;
+      background-color: #ffffff;
+      color: #666;
+      display: inline-block;
+      padding: 4px;
+      transform: scale(.9);
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .fw-lb-t2 {
+      font-size: 12px;
+      background-color: #ff7966;
+      color: #fff;
+      display: inline-block;
+      padding: 4px;
+      transform: scale(.9);
+      border-radius: 4px;
+    }
+  }
+}

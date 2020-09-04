@@ -1,0 +1,25 @@
+.m-list {
+  margin: 30px 15px;
+  li {
+    @include borderBottom($r: #efefef);
+    padding-bottom: 10px;
+    margin-top: 30px;
+    .left1 {
+      >img {
+        margin-right: 15px;
+      }
+      .intro {
+        line-height: 22px;
+         :first-child {
+          font-size: $base-fz-m;
+          color: $text-color;
+          font-weight: bold;
+        }
+         :last-child {
+          font-size: $base-fz-s;
+          color: $littlesc;
+        }
+      }
+    }
+  }
+}
