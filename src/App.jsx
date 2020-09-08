@@ -5,8 +5,8 @@ import { HashRouter as Router, Switch, Route, withRouter, Redirect } from 'react
 import './app.scss'
 
 // 测试 react hooks函数
-import Hooks from '@/views/reactHooks/Hooks'
-import Hooks1 from '@/views/reactHooks/Hooks1'
+import Hooks1 from '@/views/reactHooks/UseState'
+import Hooks2 from '@/views/reactHooks/Hooks2'
 
 // 路由页面
 // import Home from '@/views/tabbar/home/Home'
@@ -111,8 +111,8 @@ App.defaultProps = {
     { id: 16, type: 1, path: "/record", component: Reservation, exact: false },
     { id: 17, type: 1, path: "/roomdetail/:id", component: RoomDetail, exact: false },
     // 测试 hooks
-    { id: 18, type: 1, path: "/hooks", component: Hooks, exact: false },
     { id: 19, type: 1, path: "/hooks1", component: Hooks1, exact: false },
+    { id: 20, type: 1, path: "/hooks2", component: Hooks2, exact: false },
 
     { id: 8, type: 1, path: "/*", component: NotFound, exact: false },
   ]

@@ -21,7 +21,7 @@ export default class Login extends Component {
     dis: false,
     // 多个输入框简单处理
     username: '',
-    password: ''
+    password: '',
   }
 
   goHome = () => {
@@ -93,10 +93,10 @@ export default class Login extends Component {
   // 处理多个输入框简单处理
   onInputChange = (e)=>{
     let InputName = e.target.name;
-    let InputValue = e.target.value;
+    let InputValue = e.target.type === 'checkbox' ? e.target.checked  : e.target.value;
     console.log(InputName,InputValue)
     this.setState({
-        [ InputName ]: InputValue ,
+        [ InputName ]: InputValue
     })
   }
   // 处理多个输入框简单处理
