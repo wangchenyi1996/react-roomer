@@ -7,6 +7,7 @@ import './app.scss'
 // 测试 react hooks函数
 import Hooks1 from '@/views/reactHooks/UseState'
 import Hooks2 from '@/views/reactHooks/Hooks2'
+import Hooks3 from '@/views/reactHooks/Hooks3'
 
 // 路由页面
 // import Home from '@/views/tabbar/home/Home'
@@ -113,6 +114,7 @@ App.defaultProps = {
     // 测试 hooks
     { id: 19, type: 1, path: "/hooks1", component: Hooks1, exact: false },
     { id: 20, type: 1, path: "/hooks2", component: Hooks2, exact: false },
+    { id: 21, type: 1, path: "/hooks3", component: Hooks3, exact: false },
 
     { id: 8, type: 1, path: "/*", component: NotFound, exact: false },
   ]
