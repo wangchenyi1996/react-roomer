@@ -10,6 +10,7 @@
     "axios": "^0.19.2",
     "babel-plugin-import": "^1.13.0",
     "customize-cra": "^0.9.1",
+    "events": "^3.1.0",
     "fastclick": "^1.0.6",
     "file-loader": "^6.0.0",
     "less": "^3.11.2",
