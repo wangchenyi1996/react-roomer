@@ -73,6 +73,18 @@ class App extends Component {
             }
           })
         }
+        {/* {
+          路由鉴权
+          let token = this.props.token
+          navs.map((item, index) => {
+            return <Route key={index} path={item.path} exact render={props =>
+              (!item.auth ? (<item.component {...props} />) : (token ? <item.component {...props} /> : <Redirect to={{
+                pathname: '/login',
+                state: { from: props.location }
+              }} />)
+              )} />
+          })
+        } */}
       </Switch>
     )
   }

@@ -40,14 +40,16 @@ class A extends Component {
 }
 
 class B extends Component {
+    handleEvent = (data) => {
+        // console.log('B组件:', data)
+        this.props.handleMsg('我是B组件传的数据')
+    }
     componentDidMount() {
-        this.msgEvent = emitter.addListener('theclick', (data) => {
-            // console.log('B组件:', data)
-            this.props.handleMsg('我是B组件传的数据')
-        })
+        emitter.on('theclick', this.handleEvent)
     }
     componentWillUnmount() {
-        emitter.off(this.msgEvent,()=>{});
+        console.log('移除前')
+        emitter.removeListener('theclick',this.handleEvent);
     }
     render() {
         return (

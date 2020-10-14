@@ -48,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "http-proxy-middleware": "^1.0.5",
     "react-router-dom": "^5.2.0",
     "sass-resources-loader": "^2.0.3",
     "svg-sprite-loader": "^5.0.0"
